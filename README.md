@@ -1,5 +1,5 @@
 # fedora-nvidia-optimus-config
-Script for installing proprietary Nvidia drivers on Fedora and set Nvidia GPU as default output. 
+Script for laptops with Hybrid GPU (Intel + Nvidia), providing proprietary Nvidia drivers on Fedora and set Nvidia GPU as default display output.
 
 Just run it on your terminal:
 
