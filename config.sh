@@ -10,7 +10,7 @@ if [ "$EUID" -ne 0 ]
 fi
 
 # Enable RPM Fusion
-dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
 
 # Update the system
 dnf update -y
@@ -18,10 +18,10 @@ dnf update -y
 ## Install the Nvidia driver
 
 # Install akmod-nvidia
-dnf install gcc kernel-headers kernel-devel akmod-nvidia xorg-x11-drv-nvidia xorg-x11-drv-nvidia-libs xorg-x11-drv-nvidia-libs.i686
+dnf install gcc kernel-headers kernel-devel akmod-nvidia xorg-x11-drv-nvidia xorg-x11-drv-nvidia-libs xorg-x11-drv-nvidia-libs.i686 -y
 
 # Install CUDA
-dnf install xorg-x11-drv-nvidia-cuda
+dnf install xorg-x11-drv-nvidia-cuda -y
 
 # Finalize config
 akmods --force
