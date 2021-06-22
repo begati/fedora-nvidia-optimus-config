@@ -5,7 +5,7 @@
 
 # Verify for sudo/root execution
 if [ "$EUID" -ne 0 ]
-  then echo "Please, this script with sudo."
+  then echo "Please, run this script with sudo."
   exit
 fi
 
